@@ -1,0 +1,14 @@
+{
+  "name": "theatre-refactoring",
+  "version": "1.0.0",
+  "description": "Theatre Refactoring in TypeScript",
+  "scripts": {
+    "start": "ts-node app/index.ts"
+  },
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "ts-node": "~9.1.1",
+    "typescript": "~4.1.3"
+  }
+}
