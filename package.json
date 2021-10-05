@@ -3,12 +3,39 @@
   "version": "1.0.0",
   "description": "Theatre Refactoring in TypeScript",
   "scripts": {
-    "start": "ts-node app/index.ts"
+    "precompile": "rimraf app/**/*.js test/**/*.js",
+    "compile": "tsc",
+    "pretest": "rimraf app/**/*.js test/**/*.js",
+    "test": "nyc mocha"
   },
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "@types/chai": "^4.2.22",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.10.2",
+    "chai": "^4.3.4",
+    "mocha": "^9.1.2",
+    "nyc": "^15.1.0",
+    "rimraf": "^3.0.2",
+    "source-map-support": "^0.5.20",
     "ts-node": "~9.1.1",
     "typescript": "~4.1.3"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "exclude": [
+      "**/*.d.ts",
+      "test/**"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "html",
+      "text"
+    ]
   }
 }

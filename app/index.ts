@@ -1,7 +1,5 @@
-import * as invoice from '../invoices.json'
-import * as plays from '../plays.json'
 
-function statement (invoice, plays) {
+export function statement (invoice, plays) {
     let totalAmount = 0;
     let volumeCredits = 0;
     let result = `Statement for ${invoice.customer}\n`;
@@ -47,5 +45,3 @@ function statement (invoice, plays) {
         result += `You earned ${volumeCredits} credits\n`
         return result
 }
-
-console.log(statement(invoice[0], plays))
