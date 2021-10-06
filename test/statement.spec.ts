@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import * as invoices from "../invoices.json";
 import * as plays from "../plays.json";
-import { statement } from "../app";
+import { statement } from "../app/statement";
 
 describe("Theatre Statement ", function () {
   it("Given a correct invoice return the correct information", function () {
